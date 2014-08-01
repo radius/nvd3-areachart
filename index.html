@@ -41,8 +41,8 @@
   <script src="//cdnjs.cloudflare.com/ajax/libs/nvd3/1.1.15-beta/nv.d3.min.js"></script>
   <script src="js/AreaChart.js"></script>
   <script>
-  // kick this thing off
-  var chart = new AreaChart('#chart svg');
+  // kick this thing off, sending URL to our data and the target element's selector
+  var chart = new AreaChart('data/points.json', '#chart svg');
   chart.show();
   </script>
 

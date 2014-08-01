@@ -1,9 +1,10 @@
-var AreaChart = function(selector) {
+var AreaChart = function(url, selector) {
+  this.url = url;
   this.selector = selector;
 };
 AreaChart.prototype.show = function() {
   var self = this;
-  d3.json('data/points.json', function(data) {
+  d3.json(self.url, function(data) {
     nv.addGraph(function() {
       var chart = nv.models.lineChart()
         .x(function(d) {
